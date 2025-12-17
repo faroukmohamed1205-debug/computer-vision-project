@@ -1,0 +1,41 @@
+
+BRAIN TUMOR SEGMENTATION PROJECT - RESULTS SUMMARY (PyTorch)
+======================================================================
+
+Dataset Statistics:
+  Total Patients: 110
+  Total Slices: 3929
+  Train: 77 patients, 2750 slices
+  Validation: 16 patients, 618 slices
+  Test: 17 patients, 561 slices
+
+Baseline Model (α=0.5, β=0.5):
+  Validation Dice: 0.1637
+  Test Dice: 0.1705
+  Test IoU: 0.1039
+  Mean Test Dice (per-sample): 0.6755 ± 0.4083
+
+Optimized Model (α=0.1465, β=0.7929):
+  Validation Dice: 0.1542
+  Test Dice: 0.1482
+  Test IoU: 0.0889
+  Mean Test Dice (per-sample): 0.5819 ± 0.4371
+
+Performance Improvement:
+  Absolute: -0.0937
+  Relative: -13.87%
+  Statistical Significance: Yes (p < 0.05)
+  p-value: 2.9313e-10
+
+Best Hyperparameters Found (Optuna):
+  Alpha: 0.1465
+  Beta: 0.7929
+  Learning Rate: 0.000159
+  Number of Trials: 3
+
+Model Architecture:
+  Framework: PyTorch
+  Total Parameters: 2,031,137
+  Device: cuda
+
+======================================================================
